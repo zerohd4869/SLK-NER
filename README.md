@@ -1,6 +1,6 @@
 # SLK-NER
 
-The implementation of SEKE 2020 paper "[SLK-NER: Exploiting Second-order Lexicon Knowledge for Chinese NER]()"
+Source code for SEKE 2020 paper "[SLK-NER: Exploiting Second-order Lexicon Knowledge for Chinese NER]()"
 
 
 # Requirements

@@ -1,6 +1,6 @@
 # SLK-NER
 
-The implementation of our SEKE 2020 paper "[SLK-NER: Exploiting Second-order Lexicon Knowledge for Chinese NER]()"
+The implementation of SEKE 2020 paper "[SLK-NER: Exploiting Second-order Lexicon Knowledge for Chinese NER]()"
 
 
 # Requirements
@@ -18,8 +18,9 @@ torch == 1.1.0<br>
 
   ### Input format:
 
-  BMES tag scheme, with each character its label for one line. Sentences are splited with a null line.  
-    ```cpp
+  BMES tag scheme, with each character its label for one line. Sentences are splited with a null line.
+  
+  ```cpp
     美   B-LOC  
     国   E-LOC  
     的   O  
@@ -34,7 +35,7 @@ torch == 1.1.0<br>
     笑   O  
     风   O  
     生   O   
-    ``` 
+  ``` 
 
   ### Pretrained Embeddings
   Character embeddings: [chinese_L-12_H-768_A-12](https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip)  

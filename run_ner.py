@@ -29,14 +29,14 @@ from transformers import (
     XLMRobertaTokenizer,
     get_linear_schedule_with_warmup,
 )
-from utils.utils_ner import convert_examples_to_features, get_labels, read_examples_from_file
+from model.utils.utils_ner import convert_examples_to_features, get_labels, read_examples_from_file
 
 try:
     from torch.utils.tensorboard import SummaryWriter
 except ImportError:
     from tensorboardX import SummaryWriter
 
-from utils.data import Data
+from model.utils.data import Data
 import torch.autograd as autograd
 
 logger = logging.getLogger(__name__)

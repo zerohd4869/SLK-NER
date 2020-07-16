@@ -1,8 +1,8 @@
 import sys
 
-from utils.alphabet import Alphabet
-from utils.functions import *
-from utils.gazetteer import Gazetteer
+from model.utils.alphabet import Alphabet
+from model.utils.functions import *
+from model.utils.gazetteer import Gazetteer
 
 START = "</s>"
 UNKNOWN = "</unk>"

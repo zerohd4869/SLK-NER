@@ -1,4 +1,4 @@
-from utils.trie import Trie
+from model.utils.trie import Trie
 
 class Gazetteer:
     def __init__(self, lower, use_single):

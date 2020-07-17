@@ -6,7 +6,7 @@ import sys
 
 
 def BIO2BIOES(input_file, output_file):
-    print("Convert BIO -> BIOES for file:", input_file)
+    print("Convert BIO -> BIOES for file:", input_file)  # BMES
     with open(input_file, 'r') as in_file:
         fins = in_file.readlines()
     fout = open(output_file, 'w')
@@ -36,7 +36,7 @@ def BIO2BIOES(input_file, output_file):
         else:
             pair = line.strip('\n').split()
             words.append(pair[0])
-            labels.append(pair[-1].upper() if len(pair)>1 else 'O')
+            labels.append(pair[-1].upper() if len(pair) > 1 else 'O')
     fout.close()
     print("BIOES file generated:", output_file)
 
@@ -50,7 +50,7 @@ def BIOES2BIO(input_file, output_file):
     labels = []
     for line in fins:
         line = line.strip()
-        if len(line) ==0:
+        if len(line) == 0:
             sent_len = len(words)
             for idx in range(sent_len):
                 if "-" not in labels[idx]:
@@ -59,10 +59,10 @@ def BIOES2BIO(input_file, output_file):
                     label_type = labels[idx].split('-')[-1]
                     if "I-" in labels[idx]:
                         fout.write(words[idx] + " M-" + label_type + "\n")
-                    # if "E-" in labels[idx]:
-                    #     fout.write(words[idx] + " I-" + label_type + "\n")
-                    # elif "S-" in labels[idx]:
-                    #     fout.write(words[idx] + " B-" + label_type + "\n")
+                    if "E-" in labels[idx]:
+                        fout.write(words[idx] + " I-" + label_type + "\n")
+                    elif "S-" in labels[idx]:
+                        fout.write(words[idx] + " B-" + label_type + "\n")
                     else:
                         fout.write(words[idx] + " " + labels[idx] + "\n")
             fout.write('\n')
@@ -70,7 +70,7 @@ def BIOES2BIO(input_file, output_file):
             labels = []
         else:
             pair = line.strip('\n').split()
-            words.append(pair[0] if len(pair)>1 else '*')
+            words.append(pair[0] if len(pair) > 1 else '*')
             labels.append(pair[-1].upper())
     fout.close()
     print("BIO file generated:", output_file)

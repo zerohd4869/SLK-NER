@@ -4,8 +4,11 @@ Source code for SEKE 2020 paper "[SLK-NER: Exploiting Second-order Lexicon Knowl
 
 
 # Requirements
-python == 3.6.2<br>
-torch == 1.1.0<br>
+python == 3.6.10    <br>
+torch == 1.3.1      <br>
+numpy == 1.17.4     <br>
+seqeval == 0.0.12   <br>
+tqdm  == 4.40.0     <br>
 
 
 # How to use

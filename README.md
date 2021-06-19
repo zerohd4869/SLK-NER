@@ -1,7 +1,7 @@
 # SLK-NER
 
-Source code for SEKE 2020 paper "[SLK-NER: Exploiting Second-order Lexicon Knowledge for Chinese NER](http://ksiresearch.org/seke/seke20paper/paper153.pdf)"
-
+Source code for SEKE 2020 paper "[SLK-NER: Exploiting Second-order Lexicon Knowledge for Chinese NER](https://arxiv.org/pdf/2007.08416.pdf)"
+<!-- http://ksiresearch.org/seke/seke20paper/paper153.pdf -->
 
 # Requirements
 python == 3.6.10    <br>
